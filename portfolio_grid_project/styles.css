@@ -1,0 +1,298 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 0;
+}
+
+.navbar .left {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.navbar .right {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .right a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar .right a:hover {
+    text-decoration: underline;
+}
+
+.navbar .right img {
+    width: 24px;
+    height: 24px;
+}
+
+.bar1, .bar2, .bar3 {
+    background-color: black;
+    height: 4px;
+    width: 36px;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.navbar .hamburger {
+    display: none;
+}
+
+.navbar .hamburger:hover {
+    cursor: pointer;
+}
+
+.mobileNav {
+    width: 80px;
+    height: 100vh;
+    background-color: white;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: -160px;
+    transition: transform 0.3s;
+}
+
+.mobileNav img {
+    width: 24px;
+    height: 24px;
+}
+
+.mobileNav a {
+    text-decoration: none;
+    color: black;
+    margin: 16px 0;
+}
+
+.mobileNav a:hover {
+    text-decoration: underline;
+}
+
+.openDrawer {
+    transform: translateX(-160px);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-areas:
+        "eth eth alphabet"
+        "eth eth traveler"
+        "astronaut cube traveler"
+        "cup insta insta"
+        "cup insta insta"
+        "foam foam dimensional"
+        "foam foam dimensional";
+    gap: 16px;
+    width: 100%;
+}
+
+#eth {
+    grid-area: eth;
+}
+#alphabet {
+    grid-area: alphabet;
+}
+#traveler {
+    grid-area: traveler;
+}
+#astronaut {
+    grid-area: astronaut;
+}
+#cube {
+    grid-area: cube;
+}
+#cup {
+    grid-area: cup;
+}
+#insta {
+    grid-area: insta;
+}
+#foam{
+    grid-area: foam;
+}
+#dimensional {
+    grid-area: dimensional;
+}
+
+.project {
+    position: relative;
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project .overlay {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.project .overlay:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.overlay.white {
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 64px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .project-grid {
+        max-width: 100%;
+        grid-template-areas:
+            "eth eth"
+            "alphabet traveler"
+            "astronaut cube"
+            "insta insta"
+            "cup foam"
+            "dimensional dimensional"
+            "dimensional dimensional";
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .mobileNav {
+        transform: translateX(0);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 16px 24px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: white;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .navbar .right {
+        display: none;
+    }
+    .navbar .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-grid {
+        margin-top: 100px;
+        max-width: 100%;
+        grid-template-areas: 
+            "eth eth"
+            "alphabet alphabet"
+            "traveler traveler"
+            "astronaut cube"
+            "insta insta"
+            "cup cup"
+            "foam foam"
+            "dimensional dimensional"
+    }
+    .project .overlay {
+        font-size: 24px;
+    }
+    footer {
+        font-size: 12px;
+        padding: 20px;
+    }
+}
+
+.animateBar1 {
+    animation: flipbar1 0.7s;
+    animation-fill-mode: forwards;
+}
+
+.animateBar2 {
+    animation: fadebar2 0.7s;
+    animation-fill-mode: forwards;
+}
+
+.animateBar3 {
+    animation: flipbar3 0.7s;
+    animation-fill-mode: forwards;
+}
+
+/* .hamburger .bar:nth-child(1) {
+    animation: flipbar1 1s infinite;
+}
+.hamburger .bar:nth-child(3) {
+    animation: flipbar3 1s infinite;
+}
+.hamburger .bar:nth-child(2) {
+    animation: fadebar2 1s infinite;
+} */
+
+@keyframes flipbar1 {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(45deg) translate(4px, 10px);
+    }
+}
+
+@keyframes flipbar3 {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(-45deg) translate(4px, -10px);
+    }
+}
+
+@keyframes fadebar2 {
+    from {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    to {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+}
