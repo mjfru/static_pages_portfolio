@@ -6,4 +6,5 @@ As I upload, I'll create a section here describing each project and my purpose f
   + Cantilever - A fully responsive advertisement for a coding conference. Focus here was on line spacing and adding a decorative flourish with text-shadow. All HTML & CSS.
   + CV Project - A CV template which was made to practice using rems for font-sizing, vh for larger element heights, and the dreaded float property. Later refactored to incorporate responsive design.
   + Order Summary Page - A simple, receipt-like page showing proof of payment for a subscription service. Made with only HTML & CSS, created to focus on small details and positioning.
+  + Portfolio Grid - A mock digital artist's portfolio created to practice page layouts using grid. Fully responsive and made with only HTML & CSS.
   + Web Developer Blog - A fully responsive mock blog for a web developer. Built to practice page sizing with view-height, alignment, and semantic HTML elements.
