@@ -2,6 +2,7 @@
 ## Here, I'll be uploading any projects I'm working on that include mostly **HTML**, **CSS**, and some **minor JavaScript**.
 As I upload, I'll create a section here describing each project and my purpose for making it. Projects listed alphabetically; hope you enjoy.
 
+  + Animation Samples - A collection of applicable, everyday animations made to practice animations and transitions.
   + Artist Portfolio - A portfolio / gallery page for an artist. This was done to practice positioning without flexbox or flexgrid. Fully responsive with only HTML & CSS.
   + Cantilever - A fully responsive advertisement for a coding conference. Focus here was on line spacing and adding a decorative flourish with text-shadow. All HTML & CSS.
   + CV Project - A CV template which was made to practice using rems for font-sizing, vh for larger element heights, and the dreaded float property. Later refactored to incorporate responsive design.
