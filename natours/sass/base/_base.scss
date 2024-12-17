@@ -1,0 +1,49 @@
+/* Basic Reset for all Browsers: */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+// Order: Base & Typography > General Layout & Grid > Page Layout > Components
+
+html {
+  /* Now we know that 1rem = 10px, easier to convert this way */
+  /* To ensure the browser handles font-size regularly, however, we'll convert 10px to a percentage so we can use an easy rem converted and keep default settings. -- 10 divided by the standard 16px */
+  //? Not in the typography because it's defining what 1rem will be for the entire page.
+  font-size: 62.5%; // 1rem = 10px
+
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 50%; // 1rem = 8px, 8/16 = 50%
+  }
+
+  // @include respond(phone) {
+  //   font-size: 30%;
+  // }
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12, 12/16 = 75%
+  }
+}
+
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
